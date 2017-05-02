@@ -1,37 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>noConflict jQuery test</title>
+	<title>noConflict jQuery</title>
 	<meta charset="utf-8">
-
-	<!-- Quick and dirty embedded CSS -->
-	<style type="text/css">
-		*{
-			padding: 0px;
-			margin: 0px;
-		}
-		.container{
-			width: 500px;
-			height: 500px;
-			border: 25px solid black;
-			margin: 0 auto;
-			line-height: 3.5;
-			font-family: monospace;
-			font-weight: bold;
-		}
-		h2{
-			margin-top: 30px;
-		}
-		img{
-			padding: 40px;
-			display: block;
-			margin: 0 auto;
-		}
-		h2, p, form{
-			text-align: center;
-		}
-	</style>
-
+	<meta name="description" content="An example of how to use jQuery in noConflict mode.">
+	<meta name="author" content="Nishita Wojnar">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 	<div class="container">
@@ -48,6 +22,9 @@
 			<label for="girl"><span></span>Girl</label>
 		</form>
 	</div>
+
+	<hr>
+	<small><strong>What is this?</strong> If you have multiple .js libraries in your web project (e.g. WordPress), a conflict may arise when you try to use the &ldquo;$&rdquo; symbol. If this happens, it&rsquo;s because another .js library shares the same symbol and the browser is no longer sure which library you&rsquo;re trying to use. To prevent such conflicts, you can put jQuery into &ldquo;noConflict mode&rdquo;!</small>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
