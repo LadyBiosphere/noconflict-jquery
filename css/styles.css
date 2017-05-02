@@ -22,3 +22,14 @@ img{
 h2, p, form{
 	text-align: center;
 }
+
+.explain{
+	margin-top: 50px;	
+	width: 550px;
+	margin: 0 auto;
+}
+
+.explain p{
+	text-align: left;
+	margin-top: 50px;
+}
