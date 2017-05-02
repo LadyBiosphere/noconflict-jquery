@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>noConflict jQuery test</title>
+	<meta charset="utf-8">
+
+	<!-- Quick and dirty embedded CSS -->
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		.container{
+			width: 500px;
+			height: 500px;
+			border: 25px solid black;
+			margin: 0 auto;
+			line-height: 3.5;
+			font-family: monospace;
+			font-weight: bold;
+		}
+		h2{
+			margin-top: 30px;
+		}
+		img{
+			padding: 40px;
+			display: block;
+			margin: 0 auto;
+		}
+		h2, p, form{
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<h2>Welcome to the World of jQuery.</h2>
+		<img src="http://images1.wikia.nocookie.net/__cb20101217154744/inciclopedia/images/0/09/Sprite_Profesor_oak_en_pokemon_azul.PNG" alt="Professor Oak">
+		<p>&ldquo;Now tell me - are you a boy or girl?&rdquo;</p>
+
+		<!-- Simple form -->
+		<form>
+			<input type="radio" class="boy" name="gender" value="boy">
+			<label for="boy"><span></span>Boy</label>
+
+			<input type="radio" class="girl" name="gender" value="girl">
+			<label for="girl"><span></span>Girl</label>
+		</form>
+	</div>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		// Only do this when there are unknown plugins or JS libraries being used, e.g. WordPress
+		// 'noConflict()' allows you to use the '$' that jQuery requires
+		jQuery.noConflict();
+
+		// Immediately after 'noConflict', you MUST write your jQuery
+		// Note: The line below is a modified '$(document).ready(function ( )) {' 
+		jQuery(document).ready(function ($) {
+		    $(".girl").click(function () {
+		        $(".girl + label").css("background-color", "#555");
+		        $(".girl + label").css("color", "#fff");
+		        $(".boy + label").css("background-color", "#fff");
+		        $(".boy + label").css("color", "#000");
+		    });
+		    $(".boy").click(function () {
+		        $(".boy + label").css("background-color", "#555");
+		        $(".boy + label").css("color", "#fff");
+		        $(".girl + label").css("background-color", "#fff");
+		        $(".girl + label").css("color", "#000");
+		    });
+		});
+	</script>
+</body>
+</html>
