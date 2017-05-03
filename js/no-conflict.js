@@ -1,4 +1,3 @@
-// Only do this when there are unknown plugins or JS libraries being used, e.g. WordPress
 // 'noConflict()' allows you to use the '$' that jQuery requires
 jQuery.noConflict();
 

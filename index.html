@@ -13,7 +13,7 @@
 		<img src="http://images1.wikia.nocookie.net/__cb20101217154744/inciclopedia/images/0/09/Sprite_Profesor_oak_en_pokemon_azul.PNG" alt="Professor Oak">
 		<p>&ldquo;Now tell me - are you a boy or girl?&rdquo;</p>
 
-		<!-- Simple form - buttons should change colour -->
+		<!-- Simple form where jQuery will be used to change the colour of the buttons -->
 		<form>
 			<input type="radio" class="boy" name="gender" value="boy">
 			<label for="boy"><span></span>Boy</label>
@@ -28,7 +28,8 @@
 		<p>To prevent such conflicts, you can put jQuery into &ldquo;noConflict mode&rdquo;!</p>
 	</div>
 
-	<!-- jQuery required -->
+	<!-- Only use 'No Conflict mode' when there are unknown plugins or JS libraries being used, e.g. WordPress  -->
+	<!-- For this example, IMAGINE that there are multiple .js libraries, in addition to jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/no-conflict.js"></script>
 </body>
